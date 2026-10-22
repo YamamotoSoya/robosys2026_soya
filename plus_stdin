@@ -12,3 +12,4 @@ for line in sys.stdin:
 	x += tonum(line.rstrip())
 
 print(x)
+# development
