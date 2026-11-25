@@ -13,11 +13,22 @@ def reg1dim(x, y):
     b = (y.sum() - a * x.sum())/n
     return a, b
 
-data = np.loadtxt(sys.stdin, delimiter=",", ndmin=2)
+# 例外処理
+try:
+	data = np.loadtxt(sys.stdin, delimiter=",", ndmin=2)
+except ValueError:
+	print("入力値が正しくありません. 入力値は数値にしてください.")
+	sys.exit(1)
+
+	# ２列以外 or データが1つ以下しかない or すべてのxが同じ
+if data.shape[1] != 2 or len(data) < 2 or np.all(data[:, 0] == data[:, 0][0]):
+	print("入力値が正しくありません. 2次元, xの異なる2つ以上のサンプルを含んだcsvファイル形式にしてください.")
+	sys.exit(1)
+
 x, y = data[:, 0], data[:, 1]
 
-print("x =", x)
-print("y =", y)
+# print("x =", x)
+# print("y =", y)
 
 a, b = reg1dim(x, y)
 print(f"{a:.4f} {b:.4f}")
