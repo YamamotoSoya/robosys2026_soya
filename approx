@@ -5,9 +5,21 @@
 import sys
 import numpy as np
 
+# 最小二乗法関数(1次関数)
+def reg1dim(x, y):
+    n = len(x)
+    a = ((np.dot(x, y)- y.sum() * x.sum()/n)/
+        ((x ** 2).sum() - x.sum()**2 / n))
+    b = (y.sum() - a * x.sum())/n
+    return a, b
+
 data = np.loadtxt(sys.stdin, delimiter=",", ndmin=2)
 x, y = data[:, 0], data[:, 1]
 
 print("x =", x)
 print("y =", y)
+
+a, b = reg1dim(x, y)
+print(f"{a:.4f} {b:.4f}")
+
 

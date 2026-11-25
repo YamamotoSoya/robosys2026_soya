@@ -12,8 +12,9 @@ This repository is for the Robot Systems Engineering 2026 course in CIT.
 This command output an approximation function from a CSV file.
 
 ### example test
+- test line.csv
 ```
-aaaa
+cat testdata/line.csv | ./approx
 ```
 
 A Python script that adds up numbers read from standard input
