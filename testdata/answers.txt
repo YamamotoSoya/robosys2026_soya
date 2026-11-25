@@ -1,0 +1,11 @@
+# 正解一覧（出力は print(f"{a:.4f} {b:.4f}") の形式）
+# ファイル名            標準出力           終了ステータス
+line.csv               2.0000 1.0000      0
+sample.csv             0.5000 1.2000      0
+negative.csv           -3.0000 4.0000     0
+decimal.csv            1.9300 0.1750      0
+error_text.csv         (なし)             1
+error_three_cols.csv   (なし)             1
+error_one_point.csv    (なし)             1
+error_same_x.csv       (なし)             1
+error_empty.csv        (なし)             1

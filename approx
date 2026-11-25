@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2026 Yamamoto Soya arukahole137@gmail.com
+# SPDX-License-Identifier: BSD-3-Clause
+
+import sys
+import numpy as np
+
+data = np.loadtxt(sys.stdin, delimiter=",", ndmin=2)
+x, y = data[:, 0], data[:, 1]
+
+print("x =", x)
+print("y =", y)
+
