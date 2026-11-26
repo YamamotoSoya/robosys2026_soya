@@ -1,0 +1,9 @@
+name: approx_test
+on: push
+jobs:
+	test:
+		runs-on: ubuntu-latest
+		steps:
+		- uses: actions/checkout@v5
+		- name: ALL test
+			run: bash -xv ./approx_test.bash
