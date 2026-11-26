@@ -9,6 +9,7 @@ This repository is for the Robot Systems Engineering 2026 course in CIT.
 ![test](https://github.com/YamamotoSoya/robosys2026/actions/workflows/test.yml/badge.svg)
 
 ## approx command
+![test](https://github.com/YamamotoSoya/robosys2026/actions/workflows/approx_test.yml/badge.svg)
 This command output an approximation function from a CSV file.
 
 ### example test

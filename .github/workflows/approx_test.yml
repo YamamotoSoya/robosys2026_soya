@@ -5,5 +5,7 @@ jobs:
 		runs-on: ubuntu-latest
 		steps:
 		- uses: actions/checkout@v5
+		- name: Install numpy
+			run: pip install numpy
 		- name: ALL test
 			run: bash -xv ./approx_test.bash
