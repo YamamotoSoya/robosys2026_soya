@@ -1,11 +1,14 @@
 name: approx_test
 on: push
 jobs:
-	test:
-		runs-on: ubuntu-latest
-		steps:
-		- uses: actions/checkout@v5
-		- name: Install numpy
-			run: pip install numpy
-		- name: ALL test
-			run: bash -xv ./approx_test.bash
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numpy
+        run: pip install numpy
+      - name: ALL test
+        run: bash -xv ./approx_test.bash
