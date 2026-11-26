@@ -17,12 +17,12 @@ def reg1dim(x, y):
 try:
 	data = np.loadtxt(sys.stdin, delimiter=",", ndmin=2)
 except ValueError:
-	print("入力値が正しくありません. 入力値は数値にしてください.")
+	print("入力値が正しくありません. 入力値は数値にしてください.", file=sys.stderr)
 	sys.exit(1)
 
 	# ２列以外 or データが1つ以下しかない or すべてのxが同じ
 if data.shape[1] != 2 or len(data) < 2 or np.all(data[:, 0] == data[:, 0][0]):
-	print("入力値が正しくありません. 2次元, xの異なる2つ以上のサンプルを含んだcsvファイル形式にしてください.")
+	print("入力値が正しくありません. 2次元, xの異なる2つ以上のサンプルを含んだcsvファイル形式にしてください.", file=sys.stderr)
 	sys.exit(1)
 
 x, y = data[:, 0], data[:, 1]
