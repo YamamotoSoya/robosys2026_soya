@@ -1,4 +1,7 @@
 #!/bin/bash
+# SPDX-FileCopyrightText: 2026 Yamamoto Soya arukahole137@gmail.com
+# SPDX-License-Identifier: BSD-3-Clause
+
 ng () {                             
         echo ${1}行目のテスト失敗
         res=1
@@ -10,7 +13,7 @@ res=0
 out=$(cat testdata/line.csv | ./approx)
 [ "${out}" = "2.0000 1.0000" ] || ng "$LINENO"
 
-# y=0.5x+1.2に近い5点（授業のデータ）
+# y=0.5x+1.2に近い5点
 out=$(cat testdata/sample.csv | ./approx)
 [ "${out}" = "0.5000 1.2000" ] || ng "$LINENO"
 
